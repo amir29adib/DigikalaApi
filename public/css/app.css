@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'IRANYekan';
+    src: url('../fonts/Qs_Iranyekan.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body p {
+    margin: 0;
+}
+
+*, body {
+    font-family: 'IRANYekan', serif;
+}
+.bg-neutral-200 {
+    background-color: #e0e0e2;
+}
+.text-neutral-300 {
+    color: #c0c2c5;
+}
+.text-neutral-500 {
+    color: #81858b;
+}
+@media (min-width: 1024px) {
+    .text-caption {
+        font-size: 12px;
+    }
+}
+.text-caption {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 2.17;
+}
+.text-neutral-900 {
+    color: #0c0c0c;
+}
+
+.text-secondary-500 {
+    color: #19bfd3;
+}
+
+@media (min-width: 1024px) {
+    .text-h4 {
+        font-size: 20px;
+    }
+}
+
+.text-h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.1;
+}
+
+@media (min-width: 1024px) {
+    .text-body1-strong {
+        font-size: 16px;
+    }
+}
+.text-body1-strong {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2.15;
+}
+
+@media (min-width: 1024px) {
+    .text-body-2 {
+        font-size: 14px;
+    }
+}
+
+.text-body-2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.17;
+}
+
+.styles_VariantInfo__enTitleLine__HNqBN {
+    height: 1px;
+}
