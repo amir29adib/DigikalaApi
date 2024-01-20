@@ -18,7 +18,11 @@ class PDFController extends Controller
 
         $product = $jsonData['data']['product'];
 
-        $pdf = PDF::loadView('pdf', compact('product'));
+        // Generate HTML content
+        $html = view('pdf', compact('product'))->render();
+
+        // Generate PDF from HTML
+        $pdf = PDF::loadHTML($html);
 
         $pdt_name = $product['title_fa'];
 

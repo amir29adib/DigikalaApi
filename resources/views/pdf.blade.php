@@ -31,7 +31,7 @@
                         </a>
                     </nav>
                 </div>
-                <h1 class="text-h4 text-neutral-900 mb-2 pointer-events-none">کاور مدل GD-1 مناسب برای گوشی موبایل سامسونگ Galaxy A11</h1>
+                <h1 class="text-h4 text-neutral-900 mb-2 pointer-events-none">{{ $product['title_fa'] }}</h1>
             </div>
         </div>
         <div class="d-lg-flex align-items-start w-100 mt-3 px-2">
@@ -40,39 +40,10 @@
                     <span class="text-neutral-300 me-2 text-body-2"></span>
                     <div class="bg-neutral-200 grow styles_VariantInfo__enTitleLine__HNqBN"></div>
                 </div>
-                <div class="d-flex align-items-center">
-                    <div class="d-flex align-items-center mt-2">
-                        <div style="width: 16px; height: 16px; line-height: 0;">
-                            <picture>
-                                <img class="w-100 d-inline-block" src="{{ asset('img/star-yellow.png') }}" width="16" height="16" alt="امتیاز" title="" style="object-fit: contain;">
-                            </picture>
-                        </div>
-                        <p class="text-body-2" style="margin-left: 4px">{{ $product['data_layer']['dimension9'] }}</p>
-                        <p class="text-caption text-neutral-300">(امتیاز {{ $product['data_layer']['metric6'] }} خریدار)</p>
-                        <div class="d-flex ms-1">
-                            <svg style="width: 16px; height: 16px; color: #e0e0e2;">
-                                <use xlink:href="#dotOutline"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center mt-2">
-                        <span class="d-inline-flex align-items-center cursor-pointer text-body-2 text-secondary-500 mx-1 cursor-pointer text-body-2">
-                            <span>{{ $product['comments_count'] }} دیدگاه</span>
-                        </span>
-                        <div class="flex text-neutral-300">
-                            <svg style="width: 16px; height: 16px; color: #e0e0e2;">
-                                <use xlink:href="#dotOutline"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="d-inline-flex align-items-center cursor-pointer text-secondary-500 text-body-2 mt-2 mx-1 cursor-pointer">
-                        <span>{{ $product['questions_count'] }} پرسش</span>
-                    </span>
-                </div>
             </div>
         </div>
         <div class="d-lg-flex align-items-start w-100">
-            <div class="col-12 col-lg-7">
+            <div class="col-12">
                 <div class="border-complete-t mt-3 mt-lg-0">
                 @if(count($product['default_variant']) > 0)
                 <div class="break-words py-3">
@@ -139,7 +110,7 @@
 
                 </div>
             </div>
-            <div class="col-12 col-lg-5">
+            <div class="col-12">
                 @if(count($product['default_variant']) > 0)
                     <div class="d-flex flex-column ms-lg-3 mb-lg-3 styles_InfoSection__buyBoxContainer__3nOwP">
                     <div class="styles_Marketable__3IHFu rounded-3 border-complete-200 bg-neutral-000 styles_InfoSection__buybox__tknJ3">
