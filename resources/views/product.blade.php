@@ -66,7 +66,7 @@
                         </a>
                     </nav>
                 </div>
-                <h1 class="text-h4 text-neutral-900 mb-2 pointer-events-none">کاور مدل GD-1 مناسب برای گوشی موبایل سامسونگ Galaxy A11</h1>
+                <h1 class="text-h4 text-neutral-900 mb-2 pointer-events-none">{{ $product['title_fa'] }}</h1>
             </div>
         </div>
         <div class="d-lg-flex align-items-start w-100 mt-3 px-2">

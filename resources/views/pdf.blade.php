@@ -3,41 +3,13 @@
 <head>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon">
 </head>
 <body>
 <div class="container rtl py-5 px-3">
-<div class="col-12 d-lg-flex mb-3 px-2">
-    <div class="col-12 mb-lg-3 mb-2">
-        @foreach($product['breadcrumb'] as $breadcrumb)
-            @if(!$loop->last)
-                <a class="text-neutral-500 text-body-2" href="#">
-                    @if(!$loop->first)
-                        <span class="mx-2">/</span>
-                    @endif
-                    {{ $breadcrumb['title'] }}
-                </a>
-            @endif
-        @endforeach
-    </div>
-</div>
 <div class="col-12 d-lg-flex mt-3 px-2 mb-3">
-    <div class="col-12 col-lg-4">
+    <div class="col-12">
         <div class="w-100 overflow-hidden text-center">
             <img class="mw-100 object-fit-cover" src="{{ $product['images']['main']['url'][0] }}" alt="">
-        </div>
-        <div class="d-flex flex-wrap align-items-center mt-5 mb-3 w-100" height="82">
-            @foreach($product['images']['list'] as $image)
-                <div class="rounded border-complete-200 p-1 me-2 mb-lg-0 mb-2">
-                    <div style="width: 72px; height: 72px; line-height: 0;">
-                        <picture>
-                            <source type="image/webp" srcset="{{ $image['webp_url'][0] }}">
-                            <source type="image/jpeg" srcset="{{ $image['webp_url'][0] }}">
-                            <img class="w-100 inline-block" src="{{ $image['url'][0] }}" width="72" height="72" alt="خرید و قیمت {{ $product['title_fa'] }}" title="{{ $product['title_fa'] }}" style="object-fit: contain;">
-                        </picture>
-                    </div>
-                </div>
-            @endforeach
         </div>
     </div>
     <div class="col-12 col-lg-8">
