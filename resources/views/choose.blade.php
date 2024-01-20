@@ -21,17 +21,24 @@
 </style>
 
 <div class="container mt-5 max-w-[350px] text-center">
-    <h3 class="text-center mb-3">لطفا شناسه محصول را وارد کنید</h3>
+
+    @if(session('status_code'))
+        @if(session('status_code') != 200)
+            <div class="alert alert-dismissible has-error bg-danger-subtle error-message text-center mb-4">شناسه محصول نامعتبر است!</div>
+        @endif
+    @endif
+
+    <h4 class="text-center mb-3">لطفا شناسه محصول را وارد کنید</h4>
 
     <form action="{{ route('product.choose') }}" method="post">
         @csrf
 
         <div class="mb-3">
-            <input type="text" id="product_id" name="product_id" class="form-control text-center" inputmode="numeric" required>
+            <input type="text" id="product_id" name="product_id" class="form-control text-center py-3" inputmode="numeric" required>
             <div id="product_id-error" class="error-message"></div>
         </div>
 
-        <button type="submit" id="submitBtn" class="btn btn-primary w-100" disabled>تایید شناسه</button>
+        <button type="submit" id="submitBtn" class="btn btn-primary w-100 py-3" disabled>تایید شناسه</button>
     </form>
 </div>
 

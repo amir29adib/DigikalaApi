@@ -15,9 +15,16 @@ class ProductController extends Controller
 
         $jsonData = $response->json();
 
-        $product = $jsonData['data']['product'];
+        if ($jsonData['status'] == 200) {
 
-        return view('product', compact('product'));
+            $product = $jsonData['data']['product'];
+
+            return view('product', compact('product'));
+
+        } else {
+
+            return redirect()->route('choose')->with('status_code', $jsonData['status']);
+        }
     }
 
     public function choose(Request $request) {

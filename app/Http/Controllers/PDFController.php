@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -25,6 +24,11 @@ class PDFController extends Controller
         $pdf = PDF::loadHTML($html);
 
         $pdt_name = $product['title_fa'];
+
+        $pdf->getDomPDF()->getOptions()->set('isHtml5ParserEnabled', true);
+        $pdf->getDomPDF()->getOptions()->set('isPhpEnabled', true);
+        $pdf->getDomPDF()->getOptions()->set('font', 'IRANYekan');
+        $pdf->getDomPDF()->getOptions()->set('isHtml5ParserEnabled', true);
 
         return $pdf->download("$pdt_name.pdf");
     }

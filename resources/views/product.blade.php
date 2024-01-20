@@ -24,8 +24,8 @@
                 </a>
             @endif
         @endforeach
-        <a href="{{ route('choose') }}" class="btn styles_btn--primary__y0GEv me-lg-5 float-end d-none d-lg-inline-block">بازگشت</a>
-        <a href="{{ route('product_pdf.export', ['product_id' => $product['id']]) }}" class="btn styles_btn--primary__y0GEv me-lg-2 float-end d-none d-lg-inline-block">خروجی pdf</a>
+        <a href="{{ route('choose') }}" class="text-body-2 btn styles_btn--primary__y0GEv me-lg-5 float-end d-none d-lg-inline-block">بازگشت</a>
+        <a href="{{ route('product_pdf.export', ['product_id' => $product['id']]) }}" class="text-body-2 btn styles_btn--primary__y0GEv me-lg-2 float-end d-none d-lg-inline-block">خروجی pdf</a>
     </div>
 </div>
 <div class="col-12 d-lg-flex mt-3 px-2 mb-3">

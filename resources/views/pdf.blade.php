@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+<style>
+    @font-face {
+        font-family: 'IRANYekan';
+        src: url({{asset('fonts/Qs_Iranyekan.ttf')}}) format('ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    *, body {
+        font-family: 'IRANYekan', serif;
+    }
+</style>
 <div class="container rtl py-5 px-3">
-<div class="col-12 d-lg-flex mt-3 px-2 mb-3">
+<div class="col-12 mt-3 px-2 mb-3">
     <div class="col-12">
         <div class="w-100 overflow-hidden text-center">
             <img class="mw-100 object-fit-cover" src="{{ $product['images']['main']['url'][0] }}" alt="">
         </div>
     </div>
-    <div class="col-12 col-lg-8">
-        <div class="d-lg-flex align-items-start w-100 px-lg-0">
+    <div class="col-12">
+        <div class="col-12">
             <div>
                 <div class="d-flex align-items-center">
                     <nav class="d-flex align-items-center">
@@ -34,7 +45,7 @@
                 <h1 class="text-h4 text-neutral-900 mb-2 pointer-events-none">{{ $product['title_fa'] }}</h1>
             </div>
         </div>
-        <div class="d-lg-flex align-items-start w-100 mt-3 px-2">
+        <div class="col-12 mt-3 px-2">
             <div class="pb-3 min-w-0 pb-lg-3 styles_InfoSection__wrapper__e2TLb styles_InfoSection__variantInfo__PVSw4">
                 <div class="d-flex align-items-center">
                     <span class="text-neutral-300 me-2 text-body-2"></span>
@@ -42,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-lg-flex align-items-start w-100">
+        <div class="col-12">
             <div class="col-12">
                 <div class="border-complete-t mt-3 mt-lg-0">
                 @if(count($product['default_variant']) > 0)
