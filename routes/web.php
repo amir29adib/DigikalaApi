@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,5 @@ Route::get('/', function () {
 
 Route::post('/product/choose', [ProductController::class, 'choose'])->name('product.choose');
 Route::get('/product/{product_id}', [ProductController::class, 'show'])->name('product.show');;
+Route::get('/pdf/{product_id}', [PDFController::class, 'export'])->name('product_pdf.export');;
 

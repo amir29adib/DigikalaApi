@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قیمت و خرید {{ $product['title_fa'] }}</title>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon">
@@ -12,8 +9,6 @@
 <div class="container rtl py-5 px-3">
 <div class="col-12 d-lg-flex mb-3 px-2">
     <div class="col-12 mb-lg-3 mb-2">
-        <a href="{{ route('choose') }}" class="btn styles_btn--primary__y0GEv w-100 d-lg-none mb-3">بازگشت</a>
-        <a href="{{ route('product_pdf.export', ['product_id' => $product['id']]) }}" class="btn styles_btn--primary__y0GEv w-100 d-lg-none mb-3">خروجی pdf</a>
         @foreach($product['breadcrumb'] as $breadcrumb)
             @if(!$loop->last)
                 <a class="text-neutral-500 text-body-2" href="#">
@@ -24,8 +19,6 @@
                 </a>
             @endif
         @endforeach
-        <a href="{{ route('choose') }}" class="btn styles_btn--primary__y0GEv me-lg-5 float-end d-none d-lg-inline-block">بازگشت</a>
-        <a href="{{ route('product_pdf.export', ['product_id' => $product['id']]) }}" class="btn styles_btn--primary__y0GEv me-lg-2 float-end d-none d-lg-inline-block">خروجی pdf</a>
     </div>
 </div>
 <div class="col-12 d-lg-flex mt-3 px-2 mb-3">
