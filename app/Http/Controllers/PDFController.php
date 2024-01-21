@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
 
 class PDFController extends Controller
@@ -20,16 +21,12 @@ class PDFController extends Controller
         // Generate HTML content
         $html = view('pdf', compact('product'))->render();
 
-        // Generate PDF from HTML
-        $pdf = PDF::loadHTML($html);
+        $pdf = App::make('snappy.pdf.wrapper');
+        $pdf->loadHTML($html);
 
         $pdt_name = $product['title_fa'];
-
-        $pdf->getDomPDF()->getOptions()->set('isHtml5ParserEnabled', true);
-        $pdf->getDomPDF()->getOptions()->set('isPhpEnabled', true);
-        $pdf->getDomPDF()->getOptions()->set('font', 'IRANYekan');
-        $pdf->getDomPDF()->getOptions()->set('isHtml5ParserEnabled', true);
-
         return $pdf->download("$pdt_name.pdf");
+
+//        return view("pdf" , compact('product'));
     }
 }

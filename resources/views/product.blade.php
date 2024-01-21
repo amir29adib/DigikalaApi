@@ -123,7 +123,7 @@
                         <div class="whitespace-nowrap">
                             <div class="d-flex align-items-center">
                                     <div class="rounded-circle d-flex align-items-center justify-content-center styles_InfoSectionVariationColorContent__iconWrapper__WEy3t">
-                                        <div class="rounded-circle mx-auto border-complete border-none d-flex align-items-center justify-content-center styles_InfoSectionVariationColorContent__main__OUcdN" style="background: rgb(33, 33, 33);">
+                                        <div class="rounded-circle mx-auto border-complete border-none d-flex align-items-center justify-content-center styles_InfoSectionVariationColorContent__main__OUcdN" style="background: {{$color['hex_code']}};">
                                             <div class="d-flex align-items-center justify-content-center">
                                                 @if ($product['default_variant']['color']['hex_code'] == $color['hex_code'])
                                                     <i  class="fas fa-check d-flex align-items-center justify-content-center" style="width: 24px; height: 24px; color: #ffffff; font-size: 13px"></i>
